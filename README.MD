@@ -21,7 +21,7 @@ upload(
 ```
 
 ### 文件解释
-* `third_party_lib/` 里 `upload.js` 文件是核心，其他4个文件都是给它来调用的     
+* `third_party_lib/` 里 [upload.js](./third_party_lib/upload.js) 文件是核心，其他4个文件都是给它来调用的     
 
 ### 备注   
 我是直接从实际项目中复制出来的。所以是这个文件夹结构       
@@ -30,3 +30,4 @@ upload(
 我的实际项目用了 React Natiave 版本 0.52，**但这里的代码不和 React Native 版本挂钩**     
 是根据阿里云给的 DEMO 和文档写的。所以只要阿里云不改接口，这里的代码都会可用    
 
+这里的本质是：**给阿里云发了一个符合它规范的 HTML 请求**
