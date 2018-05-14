@@ -4,8 +4,8 @@
 **这里的代码是为了给你提供参考**
 
 ### 文件解释
-* `src/` 文件夹里就一个 `config.js` 文件，很好理解，都是 OSS 的配置
-* `third_party_lib/` 是阿里云 OSS React Native 上传的核心代码
+* `third_party_lib/` 是阿里云 OSS React Native 上传的核心代码       
+其中 `upload.js` 是核心，其他4个文件都是给它来调用的     
 
 ### 为什么是这个文件夹结构？
 我是直接从实际项目中复制出来的。所以是这个结构       
@@ -17,7 +17,6 @@
 ### 如何使用？
 ```javascript
 import upload from '../third_party_lib/upload'
-// 引入 upload
 
 upload(
   'upload/2018-1-20/15164503124890.46344085317105055.png', 
@@ -30,5 +29,4 @@ upload(
 // 注意这里的参数当然不是这样写死的, 比如 image/png，只是代码我是从实际项目中直接复制过来的
 // 如果保留参数会很奇怪，会不知道参数具体值应该是什么
 // 所以这里这样写
-
 ```

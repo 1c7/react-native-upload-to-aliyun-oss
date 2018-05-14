@@ -3,12 +3,12 @@ import crypto from './crypto'
 import hmac from './hmac'
 import sha1 from './sha1'
 import Base64 from './base64'
-import Config from '../src/config'
 
 export default function upload(file_name, file_type, file_path) {
-  // production
-  var accessid = Config.production_oss_config.accessid;
-  var accesskey = Config.production_oss_config.accesskey;
+  // 这里的 id 和 key 只是为了提供 demo，让你知道格式，这个不是能用的
+  // 【换成你自己的】请替换这里的 id 和 key
+  var accessid = 'LTAIpUOrlri12345';
+  var accesskey = '4ifvcEGWMwobGvQWM3c4hefT123456';
 
   // 计算签名和其他参数
   var policyText = {
@@ -26,7 +26,7 @@ export default function upload(file_name, file_type, file_path) {
   var signature = Crypto.util.bytesToBase64(bytes);
 
   // 发送请求
-  var url = Config.production_oss;
+  var url = 'https://xxxxx-upload.oss-cn-shenzhen.aliyuncs.com'; // 【换成你自己的】
   return RNFetchBlob.fetch('POST', url, {}, [
     { name: 'key', data: file_name },
     { name: 'policy', data: policyBase64 },
